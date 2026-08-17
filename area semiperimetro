@@ -4,29 +4,15 @@ using namespace std;
 
 int main()
 {
-    float lado1, lado2, lado3;
-    float semiperimetro, area;
-
-    cout << "Ingrese el lado 1: ";
+    float area,s,lado1, lado2, lado3;
+    cout<<"Ingresar lado1: "<<endl;
     cin >> lado1;
-
-    cout << "Ingrese el lado 2: ";
+    cout << "Ingresar lado2: "<<endl;
     cin >> lado2;
-
-    cout << "Ingrese el lado 3: ";
+     cout << "Ingresar lado3: "<<endl;
     cin >> lado3;
-
-    // Calcular el semiperimetro
-    semiperimetro = (lado1 + lado2 + lado3) / 2;
-
-    // Calcular el area usando la formula de Heron
-    area = sqrt(semiperimetro *
-                (semiperimetro - lado1) *
-                (semiperimetro - lado2) *
-                (semiperimetro - lado3));
-
-    cout << "\nEl semiperimetro es: " << semiperimetro << endl;
-    cout << "El area del triangulo es: " << area << endl;
-
+    s=(lado1+lado2+lado3)/2
+area = sqrt (s*(s-lado1)*(s-lado2)*(s-lado3));
+cout<<"El semiperimetro es: "<<area;
     return 0;
 }
