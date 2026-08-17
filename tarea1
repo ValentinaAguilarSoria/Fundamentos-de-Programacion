@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float a,b,suma;
+cout<<"Ingresar A: ";
+cin>>a;
+cout<<"Ingresar B: "
+cin>>b;
+suma=a+b;
+cout<<"A+B es: " <<suma;
+return 0;
+}
