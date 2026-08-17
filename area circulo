@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  float radio, area;
+
+cout << "Ingresar el valor de radio: ";
+cin >> radio;
+area = (3.1416 * radio * radio) / 2;
+cout << "El radio es: " << area;
+
+return 0;
+}
