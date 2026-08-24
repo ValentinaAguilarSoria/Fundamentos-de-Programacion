@@ -11,3 +11,4 @@ int main ()
   else
   cout<<"No puede votar";
    return 0;
+}
