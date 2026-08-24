@@ -1,0 +1,49 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    float a, b, c;
+    double x1, x2;
+    double determinante;
+   
+    cout << "Ingrese valor de a: ";
+    cin >> a;
+    cout << "Ingrese valor de b: ";
+    cin >> b;
+    cout << "Ingrese valor de c: ";
+    cin >> c;
+    determinante = b * b - 4 * a * c;
+    if (determinante > 0)
+    {
+     
+        x1 = (-b + sqrt(determinante)) / (2 * a);
+        x2 = (-b - sqrt(determinante)) / (2 * a);
+
+        cout << endl;
+        cout << "La determinante es positiva." << endl;
+        cout << "Existen dos raices reales diferentes." << endl;
+        cout << "Primera raiz: " << x1 << endl;
+        cout << "Segunda raiz: " << x2 << endl;
+    }
+    else if (determinante == 0)
+    {
+       
+        x1 = -b / (2 * a);
+
+        cout << endl;
+        cout << "La determinante es cero." << endl;
+        cout << "Existe una unica raiz real." << endl;
+        cout << "Raiz: " << x1 << endl;
+    }
+    else
+    {
+       
+        cout << endl;
+        cout << "La determinante es negativa." << endl;
+        cout << "Las raices son imaginarias." << endl;
+    }
+
+    return 0;
+}
