@@ -1,0 +1,61 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a, b, c, d, e, ma, me;
+    cout<<"Ingrese a"<<endl;
+    cin>>a;
+    cout<<"Ingrese b"<<endl;
+    cin>>b;
+    cout<<"Ingrese c"<<endl;
+    cin>>c;
+    cout<<"Ingrese d"<<endl;
+    cin>>d;
+cout<<"Ingrese e"<<endl;
+    cin>>e;
+    if (a>b&&a>c&&a>d&&a>e)
+    {
+        cout<<"el valor mayor es : "<<a<<endl;
+    }
+    if (b>a&&b>c&&b>d&&b>e)
+    {
+        cout<<"el valor mayor es : "<<b<<endl;
+    }
+    if (c>a&&c>b&&c>d&&c>e)
+    {
+        cout<<"el valor mayor es : "<<c<<endl;
+    }
+    if (d>a&&d>b&&d>c&&d>e)
+    {
+        cout<<"el valor mayor es : "<<d<<endl;
+    }
+    if (e>a&&e>b&&e>c&&e>d)
+    {
+        cout<<"el valor mayor es : "<<e<<endl;
+    }
+
+    if (a<b&&a<c&&a<d&&a<e)
+    {
+        cout<<"el valor menor es : "<<a;
+    }
+    if (b<a&&b<c&&b<d&&b<e)
+    {
+        cout<<"el valor menor es : "<<b;
+    }
+    if (c<a&&c<b&&c<d&&c<e)
+    {
+        cout<<"el valor menor es : "<<c;
+    }
+    if (d<a&&d<b&&d<c&&d<e)
+    {
+        cout<<"el valor menor es : "<<d;
+    }
+    if (e<a&&e<b&&e<c&&e<d)
+    {
+        cout<<"el valor menor es : "<<e;
+    }
+
+    return 0;
+}
