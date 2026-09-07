@@ -1,0 +1,66 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+float hamburguesa,hamburguesaconqueso,papasfritas,soda,total,cantidad,numero;
+int opcion,canthamb=0,canthambconq=0,cantpapas=0,cantsoda=0;
+double precio=0,suma=0;
+
+do{
+    cout<<"-----Menu-----:"<<endl;
+    cout<<"1-hamburguesa(3bs):"<<endl;
+    cout<<"2-hamburguesaconqueso(5bs):"<<endl;
+    cout<<"3-papasfritas(2bs):"<<endl;
+    cout<<"4-soda(2.5bs):"<<endl;
+    cout<<"0,Salir:"<<endl;
+    cout<<"Seleccione un numero(1-4):"<<endl;
+    cin>>opcion;
+    switch (opcion) {
+        case 1:
+            total=cantidad*3;
+            break;
+        case 2:
+            total=cantidad*5;
+            break;
+        case 3:
+            total=cantidad*2;
+            break;
+        case 4:
+            total=cantidad*2.5;
+            break;
+        case 0:
+            cout<<"Salir:"<<endl;
+            break;
+        default:
+        cout<<"Opcion invalida"<<endl;
+    }
+    if (opcion >0 && opcion <=4){
+    cout<<"Ingresar la cantidad:";
+    cin>>cantidad;
+    suma=suma+total;
+        
+    }
+    if (opcion==1){
+        hamburguesa=hamburguesa+total;
+        canthamb=canthamb+cantidad;}
+    else
+        if (opcion==2){
+            hamburguesaconqueso=hamburguesaconqueso+total;
+            canthambconq=canthambconq+cantidad;}
+        else
+            if (opcion==3){
+            papasfritas=papasfritas+total;
+            cantpapas=cantpapas+cantidad;}
+            else
+                if (opcion==4){
+                soda=soda+total;
+                cantsoda=cantsoda+cantidad;}
+} while (opcion!=0);
+cout<<"         ITEM                            CANTIDAD        TOTAL PARCIAL"<<endl;
+cout<<"hamburguesa (3bs)                    "<<canthamb<<"\t"<<hamburguesa<<endl;
+cout<<"hamburguesaconqueso (5bs)            "<<canthambconq<<"\t"<<hamburguesaconqueso<<endl;
+cout<<"papasfritas (2bs)                    "<<cantpapas<<"\t"<<papasfritas<<endl;
+cout<<"soda (2.5bs)                    "<<cantsoda<<"\t"<<soda<<endl;
+
+    return 0;
+}
