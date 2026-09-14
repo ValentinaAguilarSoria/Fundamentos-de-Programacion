@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+   int cont,a;// cont=0
+   cout<<"Ingrese el numero de repeticiones:"<<endl;
+   cin>>a;
+   cont=0;
+   do
+   {
+  cont=cont+1;
+   }
+   while (cont<a);
+    cout<<"El valor del contador es:"<<cont<<endl;
+    return 0;
+}
