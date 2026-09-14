@@ -2,10 +2,15 @@
 using namespace std;
 int main()
 {
-   int suma,a;// cont=0
+   int cont,suma=0,a;// cont=0
    cout<<"Ingrese hasta que numero debe sumar:";
    cin>>a;
-   for (suma=0;suma<=a;suma=suma+1)
-    cout<<"La suma total es:"<<suma<<endl;
+   cout<<"Suma=";
+   for (cont=1;cont<=a;cont=cont+1)
+   {
+    cout<<"+"<<cont;
+    suma=suma+cont;
+   }
+   cout<<endl<<"La suma total es:"<<suma<<endl;
     return 0;
 }
