@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+ int menor(int a,int b);
+ 
+ int main()
+{
+  int numero1,numero2;
+       cout<<"Ingrese el primer numero: ";
+    cin>> numero1;
+    cout<<"Ingrese el segundo numero: ";
+    cin>> numero2; 
+    cout<<"El menor numero es: "<<menor(numero1,numero2);
+
+    return 0;
+}
+  int menor(int a,int b){
+    int mn;
+    if (a<b)
+    return a;
+        else
+        return b;
+return 0;
+}
+
