@@ -1,0 +1,118 @@
+#include <iostream>
+
+using namespace std;
+
+// Declaración de prototipos de funciones
+void menu();
+void primerapregunta(int edad, int nota);
+int precios(int peso);
+float totalapagar(int cantidad, float precio);
+
+int main()
+{
+    int opcion;
+    do {
+        menu();
+        cin >> opcion;
+
+        switch (opcion)
+        {
+        case 1: {
+            int edad, nota;
+            cout << "\n--- PREGUNTA 1 ---\n";
+            cout << "Ingrese la edad: ";
+            cin >> edad;
+            cout << "Ingrese la nota: ";
+            cin >> nota;
+            primerapregunta(edad, nota);
+            break;
+        }
+        case 2: {
+            int peso;
+            cout << "\n--- PREGUNTA 2 (Cálculo de Envío) ---\n";
+            cout << "Ingrese el peso en kg: ";
+            cin >> peso;
+
+            int costo = precios(peso);
+            if (costo != -1) {
+                cout << "El costo de envio es: Bs. " << costo << endl;
+            }
+            else {
+                cout << "El paquete excede el peso permitido (maximo 10 kg).\n";
+            }
+            break;
+        }
+        case 3: {
+            int cantidad;
+            float precio;
+            cout << "\n--- CALCULAR TOTAL A PAGAR ---\n";
+            cout << "Ingrese la cantidad: ";
+            cin >> cantidad;
+            cout << "Ingrese el precio unitario: ";
+            cin >> precio;
+            cout << "El total a pagar es: " << totalapagar(cantidad, precio) << endl;
+            break;
+        }
+        case 4:
+            cout << "Saliendo del programa..." << endl;
+            break;
+
+        default:
+            cout << "Opcion invalida. Intente de nuevo." << endl;
+        }
+        cout << endl;
+
+    } while (opcion != 4);
+
+    return 0;
+}
+
+// Función para desplegar el menú principal
+void menu() {
+    cout << "========= MENU PRINCIPAL =========" << endl;
+    cout << "1. Evaluar Nota y Edad (Pregunta 1)" << endl;
+    cout << "2. Calcular Costo de Envio (Pregunta 2)" << endl;
+    cout << "3. Calcular Total a Pagar" << endl;
+    cout << "4. Salir" << endl;
+    cout << "Seleccione una opcion: ";
+}
+
+// Lógica de la Pregunta 1
+void primerapregunta(int edad, int nota) {
+    if (edad >= 18) {
+        if (nota >= 70) {
+            cout << "APROBADO - MAYOR DE EDAD" << endl;
+        }
+        else {
+            cout << "REPROBADO - MAYOR DE EDAD" << endl;
+        }
+    }
+    else {
+        if (nota >= 60) {
+            cout << "APROBADO - MENOR DE EDAD" << endl;
+        }
+        else {
+            cout << "REPROBADO - MENOR DE EDAD" << endl;
+        }
+    }
+}
+
+// Lógica de la Pregunta 2: Tarifas de envío según el peso
+int precios(int peso) {
+    if (peso <= 2) {
+        return 15; // Hasta 2 kg -> Bs. 15
+    }
+    else if (peso <= 5) {
+        return 25; // Más de 2 kg y hasta 5 kg -> Bs. 25
+    }
+    else if (peso <= 10) {
+        return 40; // Más de 5 kg y hasta 10 kg -> Bs. 40
+    }
+    else {
+        return -1; // En caso de exceder el peso máximo permitido
+    }
+}
+
+// Función auxiliar para calcular cantidad * precio
+float totalapagar(int cantidad, float precio) {
+    return cantidad * precio;
