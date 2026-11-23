@@ -1,0 +1,145 @@
+void mostrarRegistros();
+
+void buscarEstudiante();
+
+int main() {
+
+    int opcion;
+
+    do {
+
+        cout << "\n--- REGISTRO DE ESTUDIANTES ---\n";
+
+        cout << "1. Mostrar estudiantes\n";
+
+        cout << "2. Buscar por codigo\n";
+
+        cout << "3. Salir\n";
+
+        cout << "Seleccione una opcion: ";
+
+        cin >> opcion;
+
+        switch (opcion) {
+
+            case 1:
+
+                mostrarRegistros();
+
+                break;
+
+            case 2:
+
+                buscarEstudiante();
+
+                break;
+
+            case 3:
+
+                cout << "Fin del programa\n";
+
+                break;
+
+            default:
+
+                cout << "Opcion incorrecta\n";
+
+        }
+
+    } while (opcion != 3);
+
+    return 0;
+
+}
+
+// PARA LEER Y MOSTRAR
+
+void mostrarRegistros() {
+
+    ifstream archivo("estudiantes.txt");
+
+    string linea;
+
+    if (!archivo.is_open()) {
+
+        cout << "No se pudo abrir el archivo\n";
+
+        return;
+
+    }
+
+    cout << "\nESTUDIANTES REGISTRADOS:\n";
+
+    while (getline(archivo, linea)) {
+
+        cout << linea << endl;
+
+    }
+
+    if (archivo.bad()) {
+
+        cout << "Error de lectura\n";
+
+    }
+
+    archivo.close();
+
+}
+
+// PARA BUSCAR POR CODIGO
+
+void buscarEstudiante() {
+
+    ifstream archivo("estudiantes.txt");
+
+    string linea, codigoGuardado, buscado;
+
+    bool encontrado = false;
+
+    if (!archivo.is_open()) {
+
+        cout << "No se pudo abrir el archivo\n";
+
+        return;
+
+    }
+
+    cout << "Ingrese codigo a buscar: ";
+
+    cin >> buscado;
+
+    while (getline(archivo, linea)) {
+
+        stringstream ss(linea);
+
+        getline(ss, codigoGuardado, '|');
+
+        if (codigoGuardado == buscado) {
+
+            cout << "Estudiante encontrado:\n";
+
+            cout << linea << endl;
+
+            encontrado = true;
+
+            break;
+
+        }
+
+    }
+
+    if (!encontrado) {
+
+        cout << "No encontrado\n";
+
+    }
+
+    if (archivo.bad()) {
+
+        cout << "Error de lectura\n";
+
+    }
+
+    archivo.close();
+
+}
