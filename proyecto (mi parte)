@@ -1,5 +1,11 @@
-void mostrarRegistros();
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <sstream>
 
+using namespace std;
+
+void mostrarRegistros();
 void buscarEstudiante();
 
 int main() {
